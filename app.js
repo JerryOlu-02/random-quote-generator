@@ -21,7 +21,7 @@ const showError = function (err) {
 const getApi = async function () {
   try {
     // Generate random Quote
-    let slip_id = (await Math.floor(Math.random() * 199)) + 1;
+    let slip_id = Math.floor(Math.random() * 199) + 1;
 
     // Get Quote
     const request = await fetch(`https://api.adviceslip.com/advice/${slip_id}`);
