@@ -28,9 +28,9 @@ const getApi = async function () {
 
     const { slip: dataQuotes } = await request.json();
 
+    adviceText.style.opacity = 0;
     let adviceId = await dataQuotes.id;
     let adviceQuote = await dataQuotes.advice;
-    adviceText.style.opacity = 0;
 
     // Append Quote into HTML
     await editHtml(adviceId, adviceQuote);
